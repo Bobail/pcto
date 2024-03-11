@@ -3,14 +3,14 @@
 int main()
 {
     int a;
-    printf("inserisce un numero a\n");
+    printf("inserisce l'eta\n");
     scanf("%d", &a);
-    if(a > 10)
+    if(a > 18)
     {
-        printf("a e maggiore di 10\n");
+        printf("sei un maggiorene\n");
     }
     else
     {
-        printf("a e minole di 10\n");
+        printf("sei un minolene\n");
     }
 }
