@@ -8,6 +8,6 @@ int main()
     char parola[10];
     printf("inserisce il nome\n");
     scanf("%s", parola);
-    printf("la tua data di nascita e %s\n", parola);
+
 
 }
