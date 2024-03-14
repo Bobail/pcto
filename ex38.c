@@ -26,9 +26,9 @@ int main()
     scanf("%s", arr);
     int equalstart = 0;
     int i = 0;
-    while(array_start[i] != '\0' && arr[i] != '\0')
+    while(array_start[i] != '\0' && arr[i] != '\0' || equalstart != 0)
     {
-        if(arr[i] == array_start[i])
+        if(arr[i] != array_start[i])
         {
             equalstart = 1;
         }   
