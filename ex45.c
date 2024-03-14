@@ -14,7 +14,7 @@ int squrt(double q)
         }
         return r;
     }
-    else if(q == 0 && q == 1)
+    else if(q == 0 || q == 1)
     {
         return q;
     }
@@ -24,23 +24,24 @@ int squrt(double q)
 
 int main()
 {
-    int a;
-    int b;
-    int c;
+    double a;
+    double b;
+    double c;
     printf("inserisci i tre numeri di equazione di secondo grado in\n a.     b.     c.\n");
-    scanf("%d %d %d", &a, &b, &c);
-    int delta = b * b - 4 * (float)a * c;
+    scanf("%.3f %.3f %.3f", &a, &b, &c);
+    double delta = b * b - (4 * (float)a * c);
+    printf("%f\n", delta);
 
     if(delta > 0)
     {
-        int x1 = (-b + squrt(delta)) / 2 / a;
-        int x2 = (-b - squrt(delta)) / 2 / a;
-        printf("la soluzione e %d e %d", x1, x2);
+        double x1 = (-b + squrt(delta)) / 2 / a;
+        double x2 = (-b - squrt(delta)) / 2 / a;
+        printf("la soluzione e %.3f e %.3f", x1, x2);
     }
     else if(delta == 0)
     {
-        int x = -b / a / 2;
-        printf("la soluzione e %d", x);
+        float x = -b / a / 2;
+        printf("la soluzione e %f", x);
     }
     else 
     {
