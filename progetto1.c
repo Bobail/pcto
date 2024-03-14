@@ -1,5 +1,38 @@
 #include <stdio.h>
 
+
+
+
+
+char pagina_utente()
+{
+    // int online = 1;
+    // int inserimento;
+    // while(online = 1)
+    // {
+    //     printf("\nOrdinamento della fila              C            ");
+    //     scanf("%s", inserimento);
+    // }
+
+}
+
+
+char pagina_stander()
+{
+
+}
+char sign_in()
+{
+    char password[30];
+    char nome_signin[30];
+    printf("\nInserisci il nome o email del account e password\n");
+    printf("\nInserisci il nome del account o l'email personale: ");
+    scanf("%s", nome_signin);
+    printf("\nInserisci il password: ");
+    scanf("%s", password);
+    printf("\n\n\nInserimento successo...\n");
+}
+
 char login_stander()
 {
     char password[30];
@@ -28,8 +61,6 @@ char login_stander()
     scanf("%s", password);
 
 }
-
-
 
 
 char login_utente()
@@ -61,49 +92,80 @@ char login_utente()
 
 int main()
 {
+    int q = 0;
     printf("Benvenuto! questa é Qskip!\nl'app perfetta per chi non vuole fare le lunghe file\n\n");
     printf("evitati anche tu ore in piedi comprando il tuo posto in fila!\n\n");
     printf("oppure guadagna anche tu solamente stando in piedi!\n\n");
-    
-    char si[] = "si";
-    char no[] = "no";
-    char scelta_opening[25];
-    printf("Vuoi far parte anche tu di Qskip?\n\n");
-    scanf("%s", scelta_opening);
-    if(si[0] == scelta_opening[0])
+    while(q == 0)
     {
-        char utente[] = "utente";
-        char stander[] = "stander";
-        char risposta[50];
-
-         
-        printf("perfetto!, vuoi essere un utente o uno stander?\n");
-        scanf("%s", risposta);
-        if((risposta[0] == utente[0]) && (risposta[1] == utente[1]) && (risposta[2] == utente[2]) && (risposta[3] == utente[3]) && (risposta[4] == utente[4]) && risposta[5] == utente[5])
+        char scelta_opening[25];
+        printf("Vuoi far parte anche tu di Qskip?\n\n");
+        scanf("%s", scelta_opening);
+        if('s' == scelta_opening[0] || 'S' ==scelta_opening[0])
         {
-            printf("hai scelto di essere un nuovo utente!\n\nadesso puoi fare la fila ovunque dal divano di casa tua!\n\nprima peró devi fare il login!\n\n");
-            login_utente();
-            printf("\ngrandioso! adesso puoi comprare posti in fila\n\n");
-            
+            q++;
+            char equal[4];
+            while(q == 1)
+            {
+                printf("hai giá un account?\n");
+                scanf("%s", equal);
+                if((equal[0] == 'n') && (equal[1] == 'o'))
+                {
+                    q++;
+                    char utente[] = "utente";
+                    char stander[] = "stander";
+                    char risposta[50];
+                    
+                    
+                    while(q == 2)
+                    {
+                        printf("\nperfetto!, vuoi essere un utente o uno stander?\n");
+                        scanf("%s", risposta);
+                        if(risposta[0] == 'u' && risposta[1] == 't' && risposta[2] == 'e' && risposta[3] == 'n' && risposta[4] == 't' && risposta[5] == 'e')
+                        {
+                            printf("hai scelto di essere un nuovo utente!\n\nadesso puoi fare la fila ovunque dal divano di casa tua!\n\nprima peró devi fare il login!\n\n");
+                            login_utente();
+                            printf("\ngrandioso! adesso puoi comprare posti in fila\n\n");   
+                            q++;
+                        }
+                        else if(risposta[0] == 's' && risposta[1] == 't' && risposta[2] == 'a' && risposta[3] == 'n' && risposta[4] == 'd' && risposta[5] == 'e' && risposta[6] == 'r')
+                        {
+                            
+                            printf("\ngrandioso! hai scelto di essere uno stander!\n\nadesso puoi iniziare a guadagnare solamente stando in piedi!\n\nprima peró devi fare il login.\n\n");
+                            login_stander();
+                            printf("\nhai completato il login!\n");
+                            q++;
+                            
+                        }
+                        
+                        else
+                        {
+                            printf("\nErrore dell'inserimento\n\n");
+                        }
+                    }
+                }
+                else if((equal[0] == 's') && (equal[1] == 'i'))
+                {
+                    q++;
+                    printf("\necco il sign in del account:\n");
+                    sign_in();
+                }   
+                
+                else
+                {
+                    printf("Errore dell'inserimento\n");
+                }
+                
+            }
             
         }
-        else if(risposta[0] == stander[0] && risposta[1] == stander[1] && risposta[2] == stander[2] && risposta[3] == stander[3] && risposta[4] == stander[4] && risposta[5] == stander[5] && risposta[6] == stander[6])
+        else if('n' == scelta_opening[0] || 'N' == scelta_opening[0])
         {
-            
-            printf("\ngrandioso! hai scelto di essere uno stander!\n\nadesso puoi iniziare a guadagnare solamente stando in piedi!\n\nprima peró devi fare il login.\n\n");
-            login_stander();
-            printf("\nhai completato il login!\n");
+            printf("Speriamo di rivederti presto\n");
         }
-        
         else
         {
-            printf("Errore dell'inserimento\n\n");
+            printf("Errore della risposta\n");
         }
-    
-
-    }
-    else if(no[0] == scelta_opening[0])
-    {
-        printf("sperando Lei ritorna\n");
     }
 }
