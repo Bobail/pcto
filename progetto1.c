@@ -3,16 +3,49 @@
 
 
 
-
-char pagina_utente()
+void pagina_utente()
 {
-    // int online = 1;
-    // int inserimento;
-    // while(online = 1)
-    // {
-    //     printf("\nOrdinamento della fila              C            ");
-    //     scanf("%s", inserimento);
-    // }
+    int online;
+    online = 1;
+    int inserimento[2];
+
+    while(online = 1)
+    {
+        printf("______________________________________________________________________\n");
+        printf("Main Page                                                       Qskip\n\n");
+        printf("\n1;               2;                3;                4: leave;\n\nPuò direttamente inserire il numero della funzione che vorresti fare\n");
+        scanf("%d", inserimento);
+        if(inserimento[0] == 1 && inserimento[1] == '\0')
+        {
+            printf("1\n");
+
+        }
+        else if(inserimento[0] == 2 && inserimento[1] == '\0')
+        {
+            printf("2\n");
+
+
+        }
+        else if(inserimento[0] == 3 && inserimento[1] == '\0')
+        {
+
+            printf("3\n");
+        }
+        else if(inserimento[0] != 4)
+        {
+            printf("\nErrore del inserimento\n");
+        }
+        else
+        {
+            goto leave;
+        }
+
+    }
+    leave:
+    printf("Grazie per l'utilizzo");
+    online = 0;
+    return;
+    
 
 }
 
@@ -127,6 +160,7 @@ int main()
                             login_utente();
                             printf("\ngrandioso! adesso puoi comprare posti in fila\n\n");   
                             q++;
+                            pagina_utente();
                         }
                         else if(risposta[0] == 's' && risposta[1] == 't' && risposta[2] == 'a' && risposta[3] == 'n' && risposta[4] == 'd' && risposta[5] == 'e' && risposta[6] == 'r')
                         {
