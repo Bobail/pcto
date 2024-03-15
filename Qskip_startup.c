@@ -53,7 +53,7 @@ void parla_con_stander()
     {
         if(a == 1)
         {
-            printf("stander: ciao stander sono lo stander, mi potresti dire quanto sei lontano cosi ti dico quanto prima venire?\n");
+            printf("stander: ciao, sono lo stander, mi potresti dire quanto sei lontano (in km) cosi ti dico quanto prima venire?\n");
             scanf("%s", risposta);
             printf("grazie a dopo!\n");
             b++;
@@ -241,7 +241,7 @@ void pagina_utente()
     while(online = 1)
     {
         printf("_______________________________________________________________________________________________________________\n");
-        printf("Main Page di utente                                                          Qskip\n\n");
+        printf("Main Page di utente                                                                                       Qskip\n\n");
         printf("\n1:Ordina la tua fila        2:Parla con il tuo stander     3:Abbonamento (passa a premium)          4:leave;\n\nPuò direttamente inserire il numero della funzione che vorresti fare\n\n\n");
         scanf("%s", inserimento);
         if(inserimento[0] == '1' && inserimento[1] == '\0')
@@ -324,7 +324,6 @@ void sign_in()
 {
     char password[30];
     char nome_signin[30];
-    printf("\nInserisci il nome o email del account e password\n");
     printf("\nInserisci il nome del account o l'email personale: ");
     scanf("%s", nome_signin);
     printf("\nInserisci il password: ");
