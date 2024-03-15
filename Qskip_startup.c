@@ -170,16 +170,22 @@ void richiesta_fila()
                     printf("esprimi la tua motivazione in poche parole\n");
                     scanf("%s", motivazione);
                     printf("hai accettato la fila!\n");
+                    a++;
                 }
                 else if(risposta_r[0] == 'n'&& risposta_r[1] == 'o')
                 {
-                printf("hai deciso di continuare con la tariffa standard.\n");
-                printf("perfetto hai accettato la fila!");
+                    printf("hai deciso di continuare con la tariffa standard.\n");
+                    printf("perfetto hai accettato la fila!");
+                    a++;
+                }
+                else
+                {
+                    printf("errore dell'inserimento\n");
                 }
             }
             else if(siono[0] == 'n'&& siono[1] == 'o')
             {
-                    a++;
+                a++;
             }
             else
             {
